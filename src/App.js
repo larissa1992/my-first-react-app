@@ -137,7 +137,7 @@ export default function Weather() {
             className="gitHub"
             href="https://github.com/larissa1992/weather-app"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Open-source code{" "}
           </a>{" "}
@@ -146,7 +146,7 @@ export default function Weather() {
             className="porfolio"
             href="https://rainbow-valkyrie-5d08eb.netlify.app/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Larissa Adina
           </a>{" "}
@@ -155,7 +155,7 @@ export default function Weather() {
             className="netlify"
             href="https://6332c599ed81d50009df128d--soft-starburst-fa84d0.netlify.app/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Netlify.
           </a>
