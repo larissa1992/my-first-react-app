@@ -135,7 +135,7 @@ export default function Weather() {
         <footer>
           <a
             className="gitHub"
-            href="https://github.com/larissa1992/weather-app"
+            href="https://github.com/larissa1992/my-first-react-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -153,7 +153,7 @@ export default function Weather() {
           and hosted on{" "}
           <a
             className="netlify"
-            href="https://6332c599ed81d50009df128d--soft-starburst-fa84d0.netlify.app/"
+            href="https://633c16ff20b466734412ab8a--timely-meringue-7d896c.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
