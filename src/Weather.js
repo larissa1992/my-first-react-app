@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import backgroundVideo from "./video.mp4";
 import "./Weather.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -12,6 +13,7 @@ export default function Weather(props) {
       ready: true,
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
+      date: new Date(response.data.dt * 1000),
       humidity: Math.round(response.data.main.humidity),
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
@@ -88,7 +90,9 @@ export default function Weather(props) {
             <h2 className="city"> {city}</h2>
 
             <ul>
-              <li> {weather.date} </li>
+              <li>
+                <FormattedDate date={weather.date} />
+              </li>
               <li> {weather.description} </li>
             </ul>
             <div className="row">
