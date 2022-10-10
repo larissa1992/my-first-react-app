@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import backgroundVideo from "./video.mp4";
 import "./Weather.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -17,9 +17,14 @@ export default function Weather(props) {
       humidity: Math.round(response.data.main.humidity),
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon:response.data.weather[0].icon,
     });
     console.log(response.data);
+  }
+
+  function search() {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=35fc3221d495b343bc97b3dea0447fe8&units=metric`;
+    axios.get(apiUrl).then(displayWeatherConditions);
   }
 
   function handleSubmit(event) {
@@ -29,11 +34,6 @@ export default function Weather(props) {
 
   function updateCity(event) {
     setCity(event.target.value);
-  }
-
-  function search() {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=paris&appid=35fc3221d495b343bc97b3dea0447fe8&units=metric`;
-    axios.get(apiUrl).then(displayWeatherConditions);
   }
 
   if (weather.ready) {
@@ -56,11 +56,10 @@ export default function Weather(props) {
             <li>Portugal</li>
           </ul>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="row m-5">
               <div className="col-6">
                 <input
-                  onSubmit={handleSubmit}
                   type="text"
                   className="btn btn-outline-light btn-lg w-100 shadow-sm search-input"
                   placeholder="What's the weather in..."
@@ -85,58 +84,7 @@ export default function Weather(props) {
               </div>
             </div>
           </form>
-
-          <div className="overview m-5">
-            <h2 className="city"> {city}</h2>
-
-            <ul>
-              <li>
-                <FormattedDate date={weather.date} />
-              </li>
-              <li> {weather.description} </li>
-            </ul>
-            <div className="row">
-              <div className="col-4">
-                <div className="clear-fix  weather-temperature">
-                  <img
-                    src={weather.icon}
-                    alt={weather.description}
-                    className="float-left"
-                    width="80"
-                  />
-                </div>
-                <div className="float-left">
-                  <span className="temperature">{weather.temperature}</span>
-                  <span className="units">
-                    <a href="/" className="active">
-                      °C
-                    </a>{" "}
-                    |<a href="/">°F</a>
-                  </span>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="weather-condition">
-                  <button className="wrap-up">
-                    <div className="inner-text">
-                      Feels like: <span> {weather.feelsLike} </span>°
-                    </div>
-                  </button>
-                  <button className="wrap-up">
-                    <div className="inner-text">
-                      {" "}
-                      Humidity: <span> {weather.humidity}</span>%{" "}
-                    </div>
-                  </button>
-                  <button className="wrap-up">
-                    <div className="inner-text">
-                      Wind: <span> {weather.wind}</span>m/h
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <WeatherInfo data={weather} />
         </div>
       </div>
     );

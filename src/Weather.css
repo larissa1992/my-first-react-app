@@ -44,19 +44,25 @@ video {
   padding: 20px;
 }
 
-.temperature strong {
-  font-size: 50px;
+.temperature  {
+  font-size: 60px;
   font-weight: 400;
   position: relative;
-  left: -50px;
+  left: -10px;
   top: 6px;
 }
-.temperature .units {
-  position: relative;
-  font-size: 16px;
-  top: -15px;
-  left: -50px;
+ .units  {
+     position: relative;
+    font-size: 20px;
+    top: -16px;
+    left: -5px;
 }
+.units a {
+    color: black;
+    text-decoration:none;
+
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -76,13 +82,8 @@ a {
   color: pink;
   text-decoration: none;
 }
-.units a {
-  color: black;
-}
-.units {
-  font-size: 19px;
-  text-decoration: none;
-}
+
+
 
 .weather-temperature .active {
   color: rgb(109, 107, 107);
