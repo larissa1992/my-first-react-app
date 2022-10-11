@@ -43,24 +43,26 @@ video {
   text-transform: capitalize;
   padding: 20px;
 }
-
-.temperature  {
+.date {
+  font-size: 20px;
+  color: rgba(67, 65, 65, 0.8);
+}
+.temperature {
   font-size: 60px;
   font-weight: 400;
   position: relative;
-  left: -10px;
-  top: 6px;
+  left: -6px;
+  top: 11px;
 }
- .units  {
-     position: relative;
-    font-size: 20px;
-    top: -16px;
-    left: -5px;
+.units {
+  position: relative;
+  font-size: 20px;
+  top: -16px;
+  left: -5px;
 }
 .units a {
-    color: black;
-    text-decoration:none;
-
+  color: black;
+  text-decoration: none;
 }
 
 ul {
@@ -78,41 +80,14 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-a {
-  color: pink;
-  text-decoration: none;
-}
-
-
-
-.weather-temperature .active {
-  color: rgb(109, 107, 107);
-  cursor: default;
-}
-.weather-temperature .active:hover {
-  text-decoration: none;
-  color: black;
-}
 .weather-description {
   text-transform: capitalize;
   font-size: 20px;
-
-  color: rgba(67, 65, 65, 0.8);
-}
-
-.date {
-  font-size: 20px;
-  color: rgba(67, 65, 65, 0.8);
-}
-.weather-condition {
-  list-style: none;
-  font-size: 18px;
   color: rgba(67, 65, 65, 0.8);
 }
 
 .wrap-up {
-  height: 40px;
-  width: 125px;
+  height: 60px;
   background-color: #4f5255, 80%;
   border-radius: 53px;
   border: 1px solid rgb(228, 220, 220);
@@ -120,10 +95,10 @@ a {
 }
 
 .inner-text {
-  text-align: center;
   color: grey;
   font-size: 16px;
 }
+
 footer {
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
