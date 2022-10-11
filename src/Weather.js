@@ -3,12 +3,14 @@ import backgroundVideo from "./video.mp4";
 import "./Weather.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function displayWeatherConditions(response) {
+    console.log(response.data);
     setWeather({
       ready: true,
       city: response.data.name,
@@ -16,15 +18,16 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       humidity: Math.round(response.data.main.humidity),
       description: response.data.weather[0].description,
+      feelsLike: Math.round(response.data.main.feels_like),
       wind: Math.round(response.data.wind.speed),
-      icon:response.data.weather[0].icon,
+      icon: response.data.weather[0].icon,
     });
-    console.log(response.data);
   }
 
   function search() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=35fc3221d495b343bc97b3dea0447fe8&units=metric`;
     axios.get(apiUrl).then(displayWeatherConditions);
+    console.log(apiUrl);
   }
 
   function handleSubmit(event) {
@@ -85,6 +88,7 @@ export default function Weather(props) {
             </div>
           </form>
           <WeatherInfo data={weather} />
+          <WeatherForecast />
         </div>
       </div>
     );
