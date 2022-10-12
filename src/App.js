@@ -32,7 +32,7 @@ export default function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Netlify.
+            Netlify. 👩‍💻
           </a>
         </footer>
       </div>
