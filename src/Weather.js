@@ -50,8 +50,8 @@ export default function Weather(props) {
           type="video/mp4"
         ></video>
         <div className="container-border">
-          <h1 className="title m-3">Weather Forecast</h1>
-          <form onSubmit={handleSubmit}>
+          <h1 className="title m-2">Weather Forecast</h1>
+          <form onSubmit={handleSubmit} className="form">
             <div className="row m-5">
               <div className="col-6">
                 <input
@@ -63,7 +63,7 @@ export default function Weather(props) {
                   onChange={updateCity}
                 />
               </div>
-              <div className="col-2">
+              <div className="col-4">
                 <input
                   type="submit"
                   className="btn border-0 btn-light  btn-lg w-100 shadow-sm search-button "

@@ -18,12 +18,30 @@ video {
   box-shadow: 0 30px 50px rgba(61, 61, 63, 0.7);
   border-radius: 10px;
 }
+canvas {
+  margin-left: 15px;
+}
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+form {
+  margin-left: 60px;
+}
 .title {
   text-align: center;
-}
-.overview {
-  margin-left: -10px;
 }
 .search-input {
   background-color: rgb(208, 193, 194, 0.2) !important;
@@ -35,9 +53,27 @@ video {
   color: #373636;
   opacity: 1;
 }
-canvas {
-  margin-left: 15px;
+
+.search-button {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%);
+
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border: #de6262;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
 }
+
+.search-button:hover {
+  background-position: right center;
+}
+
+.overview {
+  margin-left: -10px;
+}
+
 .date {
   font-size: 20px;
   color: rgba(67, 65, 65, 0.8);
@@ -58,21 +94,6 @@ canvas {
 .units a {
   color: black;
   text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li:first-letter {
-  text-transform: capitalize;
 }
 
 .weather-description {
@@ -104,19 +125,18 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.8);
 }
 footer a {
-  /* color: #93bef3; */
-  color: rgb(37, 36, 36);
+  color: #4f5255;
   text-decoration: underline;
   font-weight: bold;
 }
 .gitHub:hover,
 .porfolio:hover,
 .netlify:hover {
-  background-color: rgb(89, 86, 86);
+  background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
   border-radius: 1rem;
   transition: 0.9s ease;
   padding: 10px;
-  color: white;
+  color: grey;
   cursor: pointer;
   text-decoration: none;
 }
