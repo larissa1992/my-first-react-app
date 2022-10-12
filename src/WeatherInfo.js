@@ -8,16 +8,16 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row">
-        <div className="col-4">
+        <div className="col-5">
           <h2 className="city ms-4"> {props.data.city}</h2>
           <ul className="overview">
-            <li>
-              <FormattedDate date={props.data.date} />
+            <li className="text-muted">
+              Last updated on: <FormattedDate date={props.data.date} />
             </li>
-            <li> {props.data.description} </li>
+            <li className="weather-description"> {props.data.description} </li>
           </ul>
         </div>
-        <div className="col-6 weather-details">
+        <div className="col-6 d-flex justify-content-evenly weather-details">
           <button className="wrap-up">
             <div className="inner-text">
               Feels like: <span> {props.data.feelsLike} </span>°

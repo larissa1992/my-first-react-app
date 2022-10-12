@@ -10,7 +10,7 @@ video {
 
 .container-border {
   font-family: "Prompt", sans-serif;
-  line-height: 40px;
+  line-height: 25px;
   font-weight: bold;
   margin: 30px auto;
   padding: 10px;
@@ -20,11 +20,6 @@ video {
 }
 canvas {
   margin-left: 15px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 li {
@@ -56,18 +51,12 @@ form {
 
 .search-button {
   background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%);
-
-  transition: 0.5s;
   background-size: 200% auto;
-  color: white;
-  border: #de6262;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
 }
 
 .search-button:hover {
   background-position: right center;
+  transition: 0.5s;
 }
 
 .overview {
@@ -98,8 +87,7 @@ form {
 
 .weather-description {
   text-transform: capitalize;
-  font-size: 20px;
-  color: rgba(67, 65, 65, 0.8);
+  font-size: 18px;
 }
 .weather-details {
   margin-top: 45px !important;
@@ -125,9 +113,8 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.8);
 }
 footer a {
-  color: #4f5255;
+  color: #373636;
   text-decoration: underline;
-  font-weight: bold;
 }
 .gitHub:hover,
 .porfolio:hover,
