@@ -22,7 +22,9 @@ video {
 .title {
   text-align: center;
 }
-
+.overview {
+  margin-left: -10px;
+}
 .search-input {
   background-color: rgb(208, 193, 194, 0.2) !important;
 }
@@ -33,15 +35,8 @@ video {
   color: #373636;
   opacity: 1;
 }
-.current-location {
-  font-weight: 460;
-}
-
-.city-country {
-  font-weight: 540;
-  font-size: 36px;
-  text-transform: capitalize;
-  padding: 20px;
+canvas {
+  margin-left: 15px;
 }
 .date {
   font-size: 20px;
@@ -51,14 +46,14 @@ video {
   font-size: 60px;
   font-weight: 400;
   position: relative;
-  left: 5px;
-  top: 11px;
+  left: -5px;
+  top: 25px;
 }
 .units {
   position: relative;
   font-size: 20px;
-  top: -16px;
-  left: 5px;
+  top: -5px;
+  left: -5px;
 }
 .units a {
   color: black;
@@ -85,7 +80,9 @@ li:first-letter {
   font-size: 20px;
   color: rgba(67, 65, 65, 0.8);
 }
-
+.weather-details {
+  margin-top: 45px !important;
+}
 .wrap-up {
   height: 60px;
   background-color: #4f5255, 80%;

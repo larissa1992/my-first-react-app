@@ -51,13 +51,6 @@ export default function Weather(props) {
         ></video>
         <div className="container-border">
           <h1 className="title m-3">Weather Forecast</h1>
-          <ul className="d-flex justify-content-evenly text-secondary">
-            <li>Paris</li>
-            <li>Madrid</li>
-            <li>Berlin</li>
-            <li>Portugal</li>
-          </ul>
-
           <form onSubmit={handleSubmit}>
             <div className="row m-5">
               <div className="col-6">
@@ -75,13 +68,6 @@ export default function Weather(props) {
                   type="submit"
                   className="btn border-0 btn-light  btn-lg w-100 shadow-sm search-button "
                   value="Search"
-                />
-              </div>
-              <div className="col">
-                <input
-                  type="submit"
-                  value="Current Location"
-                  className="btn border-0 btn-info  btn-lg shadow-sm  current-location"
                 />
               </div>
             </div>
