@@ -10,9 +10,9 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function displayWeatherConditions(response) {
-    console.log(response.data);
     setWeather({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
       date: new Date(response.data.dt * 1000),
@@ -27,7 +27,6 @@ export default function Weather(props) {
   function search() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=35fc3221d495b343bc97b3dea0447fe8&units=metric`;
     axios.get(apiUrl).then(displayWeatherConditions);
-    console.log(apiUrl);
   }
 
   function handleSubmit(event) {
@@ -51,7 +50,7 @@ export default function Weather(props) {
           type="video/mp4"
         ></video>
         <div className="container-border">
-          <h1 className="title m-5">Weather Forecast</h1>
+          <h1 className="title m-3">Weather Forecast</h1>
           <ul className="d-flex justify-content-evenly text-secondary">
             <li>Paris</li>
             <li>Madrid</li>
@@ -88,7 +87,8 @@ export default function Weather(props) {
             </div>
           </form>
           <WeatherInfo data={weather} />
-          <WeatherForecast />
+          <br />
+          <WeatherForecast coordinates={weather.coordinates} />
         </div>
       </div>
     );
