@@ -6,3 +6,26 @@
 .App footer {
   text-align: center;
 }
+
+footer {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0.8);
+}
+footer a {
+  color: #373636;
+  text-decoration: underline;
+}
+.gitHub:hover,
+.porfolio:hover,
+.netlify:hover {
+  background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  border-radius: 1rem;
+  transition: 0.9s ease;
+  padding: 10px;
+  color: grey;
+  cursor: pointer;
+  text-decoration: none;
+}
