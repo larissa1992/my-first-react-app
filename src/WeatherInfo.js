@@ -18,36 +18,30 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
         <div className="col-6 d-flex justify-content-evenly weather-details">
-          <button className="wrap-up">
-            <div className="inner-text">
+          <button className="wrap-up w-70 h-50">
+            <div className="inner-text ">
               Feels like: <span> {props.data.feelsLike} </span>°
             </div>
           </button>
-          <button className="wrap-up">
-            <div className="inner-text">
+          <button className="wrap-up w-70 h-50">
+            <div className="inner-text ">
               {" "}
               Humidity: <span> {props.data.humidity}</span>%{" "}
             </div>
           </button>
-          <button className="wrap-up ">
+          <button className="wrap-up w-70 h-50">
             <div className="inner-text">
               Wind: <span> {props.data.wind}</span>m/h
             </div>
           </button>
         </div>
-
-        <div className="col-6">
-          <div className="d-flex justify-content-evenly">
-            <div className="main-icon">
-              <WeatherIcon
-                code={props.data.icon}
-                alt={props.data.description}
-              />
-            </div>
-            <div>
-              <WeatherTemperature celsius={props.data.temperature} />
-            </div>
-          </div>
+      </div>
+      <div className="row ">
+        <div className="col-sm-4">
+          <WeatherIcon code={props.data.icon} alt={props.data.description} />
+        </div>
+        <div className="col-sm-4">
+          <WeatherTemperature celsius={props.data.temperature} />
         </div>
       </div>
     </div>

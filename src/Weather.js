@@ -22,6 +22,7 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       icon: response.data.weather[0].icon,
     });
+    console.log(response.data.weather);
   }
 
   function search() {
@@ -52,11 +53,11 @@ export default function Weather(props) {
         <div className="container-border">
           <h1 className="title m-2">Weather Forecast</h1>
           <form onSubmit={handleSubmit} className="form">
-            <div className="row m-5">
+            <div className="row m-5 ">
               <div className="col-6">
                 <input
                   type="text"
-                  className="btn btn-outline-light btn-lg w-100 shadow-sm search-input"
+                  className="btn btn-outline-light btn-lg  shadow-sm search-input"
                   placeholder="What's the weather in..."
                   autoComplete="off"
                   autoFocus
@@ -66,7 +67,7 @@ export default function Weather(props) {
               <div className="col-4">
                 <input
                   type="submit"
-                  className="btn border-0 btn-light  btn-lg w-100 shadow-sm search-button "
+                  className="btn border-0 btn-light  btn-lg shadow-sm search-button "
                   value="Search 🔎"
                 />
               </div>
