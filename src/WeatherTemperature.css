@@ -1,17 +1,31 @@
+.WeatherTemperature {
+  margin-top: 80px;
+}
 .temperature {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 400;
-  /* position: relative;
-  left: -5px;
-  top: 30px; */
 }
 .units {
   position: relative;
   font-size: 20px;
   top: -30px;
-  left: -5px;
+  left: 5px;
 }
 .units a {
   color: black;
   text-decoration: none;
+  left: 8px;
+  position: relative;
+  bottom: 0px;
+}
+
+@media (max-width: 700px) {
+  .WeatherTemperature {
+    margin-left: 80px;
+  }
+  .units a {
+    left: 100px;
+    position: relative;
+    bottom: 26px;
+  }
 }
