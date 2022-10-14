@@ -42,13 +42,6 @@ export default function Weather(props) {
   if (weather.ready) {
     return (
       <div className="Weather">
-        <audio controls>
-          <source
-            src="https://www.youtube.com/watch?v=QR3lp0ptpy8&t=402s"
-            autoplay
-          ></source>
-        </audio>
-
         <video
           autoPlay
           loop
