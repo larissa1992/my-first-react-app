@@ -86,6 +86,7 @@ form {
   border-radius: 53px;
   border: 1px solid rgb(228, 220, 220);
   box-shadow: 10px 10px 10px rgba(69, 66, 66, 0.5);
+  padding: 6px 25px;
 }
 
 .inner-text {
@@ -97,5 +98,8 @@ form {
   .search-input {
     margin-left: -120px;
     max-width: 200px;
+  }
+  .wrap-up {
+    padding: 10px;
   }
 }

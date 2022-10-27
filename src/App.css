@@ -29,3 +29,9 @@ footer a {
   cursor: pointer;
   text-decoration: none;
 }
+
+@media (max-width: 960px) {
+  .App {
+    max-width: fit-content;
+  }
+}
